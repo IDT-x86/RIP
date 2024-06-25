@@ -12,5 +12,5 @@ RIP is an x64 user-mode client protection module, it's very barebones but has th
 
 
 [Credits]:
-  Zydis - Disassembler
-  TsudaKageyu - MinHook Hooking Library
+  - Zydis - Disassembler
+  - TsudaKageyu - MinHook Hooking Library
