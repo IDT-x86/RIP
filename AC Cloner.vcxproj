@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{09ee6b05-e710-4cad-bac2-94058a4d0804}</ProjectGuid>
+    <RootNamespace>ACCloner</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>src\utils\disassembler\;$(IncludePath)</IncludePath>
+    <LibraryPath>src\utils\disassembler\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>src\utils\disassembler\;$(IncludePath)</IncludePath>
+    <LibraryPath>src\utils\disassembler\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);ZYDIS_STATIC_BUILD</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);ZYDIS_STATIC_BUILD</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\detections\injection\injection.cpp" />
+    <ClCompile Include="src\detections\integrity\integrity.cpp" />
+    <ClCompile Include="src\detections\veh\veh.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\utils\dependencies\minhook\buffer.cpp" />
+    <ClCompile Include="src\utils\dependencies\minhook\hde\hde32.cpp" />
+    <ClCompile Include="src\utils\dependencies\minhook\hde\hde64.cpp" />
+    <ClCompile Include="src\utils\dependencies\minhook\hook.cpp" />
+    <ClCompile Include="src\utils\dependencies\minhook\trampoline.cpp" />
+    <ClCompile Include="src\utils\disassembler\disassembler.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\detections\injection\injection.hpp" />
+    <ClInclude Include="src\detections\integrity\integrity.hpp" />
+    <ClInclude Include="src\detections\veh\veh.hpp" />
+    <ClInclude Include="src\invoker\invoker.hpp" />
+    <ClInclude Include="src\utils\dependencies\crc.hpp" />
+    <ClInclude Include="src\utils\dependencies\minhook\buffer.hpp" />
+    <ClInclude Include="src\utils\dependencies\minhook\hde\hde32.hpp" />
+    <ClInclude Include="src\utils\dependencies\minhook\hde\hde64.hpp" />
+    <ClInclude Include="src\utils\dependencies\minhook\hde\pstdint.hpp" />
+    <ClInclude Include="src\utils\dependencies\minhook\hde\table32.hpp" />
+    <ClInclude Include="src\utils\dependencies\minhook\hde\table64.hpp" />
+    <ClInclude Include="src\utils\dependencies\minhook\minhook.hpp" />
+    <ClInclude Include="src\utils\dependencies\minhook\trampoline.hpp" />
+    <ClInclude Include="src\utils\disassembler\disassembler.hpp" />
+    <ClInclude Include="src\utils\disassembler\ZycoreExportConfig.h" />
+    <ClInclude Include="src\utils\disassembler\Zycore\Allocator.h" />
+    <ClInclude Include="src\utils\disassembler\Zycore\API\Memory.h" />
+    <ClInclude Include="src\utils\disassembler\Zycore\API\Process.h" />
+    <ClInclude Include="src\utils\disassembler\Zycore\API\Synchronization.h" />
+    <ClInclude Include="src\utils\disassembler\Zycore\API\Terminal.h" />
+    <ClInclude Include="src\utils\disassembler\Zycore\API\Thread.h" />
+    <ClInclude Include="src\utils\disassembler\Zycore\ArgParse.h" />
+    <ClInclude Include="src\utils\disassembler\Zycore\Bitset.h" />
+    <ClInclude Include="src\utils\disassembler\Zycore\Comparison.h" />
+    <ClInclude Include="src\utils\disassembler\Zycore\Defines.h" />
+    <ClInclude Include="src\utils\disassembler\Zycore\Format.h" />
+    <ClInclude Include="src\utils\disassembler\Zycore\LibC.h" />
+    <ClInclude Include="src\utils\disassembler\Zycore\List.h" />
+    <ClInclude Include="src\utils\disassembler\Zycore\Object.h" />
+    <ClInclude Include="src\utils\disassembler\Zycore\Status.h" />
+    <ClInclude Include="src\utils\disassembler\Zycore\String.h" />
+    <ClInclude Include="src\utils\disassembler\Zycore\Types.h" />
+    <ClInclude Include="src\utils\disassembler\Zycore\Vector.h" />
+    <ClInclude Include="src\utils\disassembler\Zycore\Zycore.h" />
+    <ClInclude Include="src\utils\disassembler\ZydisExportConfig.h" />
+    <ClInclude Include="src\utils\disassembler\Zydis\Decoder.h" />
+    <ClInclude Include="src\utils\disassembler\Zydis\DecoderTypes.h" />
+    <ClInclude Include="src\utils\disassembler\Zydis\Defines.h" />
+    <ClInclude Include="src\utils\disassembler\Zydis\Encoder.h" />
+    <ClInclude Include="src\utils\disassembler\Zydis\Formatter.h" />
+    <ClInclude Include="src\utils\disassembler\Zydis\FormatterBuffer.h" />
+    <ClInclude Include="src\utils\disassembler\Zydis\Generated\EnumInstructionCategory.h" />
+    <ClInclude Include="src\utils\disassembler\Zydis\Generated\EnumISAExt.h" />
+    <ClInclude Include="src\utils\disassembler\Zydis\Generated\EnumISASet.h" />
+    <ClInclude Include="src\utils\disassembler\Zydis\Generated\EnumMnemonic.h" />
+    <ClInclude Include="src\utils\disassembler\Zydis\Generated\EnumRegister.h" />
+    <ClInclude Include="src\utils\disassembler\Zydis\Internal\DecoderData.h" />
+    <ClInclude Include="src\utils\disassembler\Zydis\Internal\EncoderData.h" />
+    <ClInclude Include="src\utils\disassembler\Zydis\Internal\FormatterATT.h" />
+    <ClInclude Include="src\utils\disassembler\Zydis\Internal\FormatterBase.h" />
+    <ClInclude Include="src\utils\disassembler\Zydis\Internal\FormatterIntel.h" />
+    <ClInclude Include="src\utils\disassembler\Zydis\Internal\SharedData.h" />
+    <ClInclude Include="src\utils\disassembler\Zydis\Internal\String.h" />
+    <ClInclude Include="src\utils\disassembler\Zydis\MetaInfo.h" />
+    <ClInclude Include="src\utils\disassembler\Zydis\Mnemonic.h" />
+    <ClInclude Include="src\utils\disassembler\Zydis\Register.h" />
+    <ClInclude Include="src\utils\disassembler\Zydis\SharedTypes.h" />
+    <ClInclude Include="src\utils\disassembler\Zydis\ShortString.h" />
+    <ClInclude Include="src\utils\disassembler\Zydis\Status.h" />
+    <ClInclude Include="src\utils\disassembler\Zydis\Utils.h" />
+    <ClInclude Include="src\utils\disassembler\Zydis\Zydis.h" />
+    <ClInclude Include="src\utils\utils.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="src\invoker\dtc.asm" />
+    <MASM Include="src\invoker\invoke.asm" />
+    <MASM Include="src\utils\nt_functions.asm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="src\utils\disassembler\Zycore.lib" />
+    <Library Include="src\utils\disassembler\Zydis.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
